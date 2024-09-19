@@ -9,14 +9,13 @@ from PIL import Image
 import numpy as np
 import shutil
 
-
 class MainWindow(QTabWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('images/logo.png'))
-        self.setWindowTitle('垃圾智能分类系统')
-        self.model = tf.keras.models.load_model("models/mobilenet_245_epoch30.h5")  # todo 修改为自己的模型路径
-        self.to_predict_name = "images/cc.jpeg"
+        self.setWindowIcon(QIcon('images/logo.png'))     #设置窗口的图标
+        self.setWindowTitle('垃圾智能分类系统')           #设置窗口的标题
+        self.model = tf.keras.models.load_model("models/mobilenet_245_epoch30.h5")  #加载模型
+        self.to_predict_name = "images/cc.jpeg"          #指定要进行预测的图像文件
         self.class_names = ['其他垃圾_PE塑料袋', '其他垃圾_U型回形针', '其他垃圾_一次性杯子', '其他垃圾_一次性棉签', '其他垃圾_串串竹签', '其他垃圾_便利贴', '其他垃圾_创可贴',
                             '其他垃圾_卫生纸', '其他垃圾_厨房手套', '其他垃圾_厨房抹布', '其他垃圾_口罩', '其他垃圾_唱片', '其他垃圾_图钉', '其他垃圾_大龙虾头',
                             '其他垃圾_奶茶杯', '其他垃圾_干燥剂', '其他垃圾_彩票', '其他垃圾_打泡网', '其他垃圾_打火机', '其他垃圾_搓澡巾', '其他垃圾_果壳', '其他垃圾_毛巾',
@@ -50,41 +49,47 @@ class MainWindow(QTabWidget):
                             '可回收物_音响', '可回收物_餐具', '可回收物_餐垫', '可回收物_饰品', '可回收物_鱼缸', '可回收物_鼠标', '有害垃圾_指甲油', '有害垃圾_杀虫剂',
                             '有害垃圾_温度计', '有害垃圾_灯', '有害垃圾_电池', '有害垃圾_电池板', '有害垃圾_纽扣电池', '有害垃圾_胶水', '有害垃圾_药品包装', '有害垃圾_药片',
                             '有害垃圾_药瓶', '有害垃圾_药膏', '有害垃圾_蓄电池', '有害垃圾_血压计']
-        self.resize(900, 700)
+        self.resize(900, 700)  #设置窗口的大小
         self.initUI()
 
+    #初始化UI
+    
     def initUI(self):
         main_widget = QWidget()
         main_layout = QHBoxLayout()
-        font = QFont('楷体', 15)
+        font = QFont('楷体', 15)   #设置字体
+
+    #创建UI左侧部分
 
         left_widget = QWidget()
         left_layout = QVBoxLayout()
         img_title = QLabel("样本")
         img_title.setFont(font)
-        img_title.setAlignment(Qt.AlignCenter)
+        img_title.setAlignment(Qt.AlignCenter)  #设置居中对齐
         self.img_label = QLabel()
-        img_init = cv2.imread(self.to_predict_name)
-        h, w, c = img_init.shape
-        scale = 400 / h
+        img_init = cv2.imread(self.to_predict_name)  #读取上传的图像
+        h, w, c = img_init.shape   #获取图像长宽高数据
+        scale = 400 / h            #尺寸适配
         img_show = cv2.resize(img_init, (0, 0), fx=scale, fy=scale)
         cv2.imwrite("images/show.png", img_show)
         img_init = cv2.resize(img_init, (224, 224))
         cv2.imwrite('images/target.png', img_init)
-        self.img_label.setPixmap(QPixmap("images/show.png"))
+        self.img_label.setPixmap(QPixmap("images/show.png"))  #在GUI中显示图片
         left_layout.addWidget(img_title)
         left_layout.addWidget(self.img_label, 1, Qt.AlignCenter)
-        # left_layout.setAlignment(Qt.AlignCenter)
         left_widget.setLayout(left_layout)
+
+    #创建右侧部分
 
         right_widget = QWidget()
         right_layout = QVBoxLayout()
-        btn_change = QPushButton(" 上传图片 ")
-        btn_change.clicked.connect(self.change_img)
+        btn_change = QPushButton(" 上传图片 ")       #创建“上传图片”按钮
+        btn_change.clicked.connect(self.change_img) #点击时调用change_img函数选择图片
         btn_change.setFont(font)
-        btn_predict = QPushButton(" 开始识别 ")
+        btn_predict = QPushButton(" 开始识别 ")      #创建“开始识别“按钮
         btn_predict.setFont(font)
-        btn_predict.clicked.connect(self.predict_img)
+        btn_predict.clicked.connect(self.predict_img)#点击时调用predict_img进行图像识别
+
 
         btn_camera = QPushButton(" 拍照上传 ")
         btn_camera.clicked.connect(self.capture_image)
@@ -121,33 +126,12 @@ class MainWindow(QTabWidget):
         right_layout.addStretch()
         right_widget.setLayout(right_layout)
 
-        # 关于页面
-        about_widget = QWidget()
-        about_layout = QVBoxLayout()
-        about_title = QLabel('欢迎使用垃圾分类系统')
-        about_title.setFont(QFont('楷体', 18))
-        about_title.setAlignment(Qt.AlignCenter)
-        about_img = QLabel()
-        about_img.setPixmap(QPixmap('images/about.png'))
-        about_img.setAlignment(Qt.AlignCenter)
-        label_super = QLabel('<a href="https://space.bilibili.com/161240964">作者：dejahu（关注我不迷路）</a>')
-        label_super.setFont(QFont('楷体', 12))
-        label_super.setOpenExternalLinks(True)
-        label_super.setAlignment(Qt.AlignRight)
-        about_layout.addWidget(about_title)
-        about_layout.addStretch()
-        about_layout.addWidget(about_img)
-        about_layout.addStretch()
-        about_layout.addWidget(label_super)
-        about_widget.setLayout(about_layout)
-
+      
         main_layout.addWidget(left_widget)
         main_layout.addWidget(right_widget)
         main_widget.setLayout(main_layout)
         self.addTab(main_widget, '主页')
-        self.addTab(about_widget, '关于')
         self.setTabIcon(0, QIcon('images/主页面.png'))
-        self.setTabIcon(1, QIcon('images/关于.png'))
 
     # 上传图片
     def change_img(self):
