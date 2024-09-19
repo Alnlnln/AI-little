@@ -1,0 +1,131 @@
+(trash) PS C:\Users\JZX\Desktop\trash classification (1)\code> & D:/Anaconda/envs/face/python.exe "c:/Users/JZX/Desktop/trash classification (1)/code/train_cnn.py"
+2024-09-17 18:59:30.018390: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll
+Found 80012 files belonging to 245 classes.
+Using 72011 files for training.
+2024-09-17 18:59:33.887575: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library nvcuda.dll
+2024-09-17 18:59:33.914883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: GeForce RTX 2070 SUPER computeCapability: 7.5
+coreClock: 1.815GHz coreCount: 40 deviceMemorySize: 8.00GiB deviceMemoryBandwidth: 417.29GiB/s
+2024-09-17 18:59:33.915040: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll
+2024-09-17 18:59:33.918683: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll
+2024-09-17 18:59:33.921226: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll
+2024-09-17 18:59:33.921973: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll
+2024-09-17 18:59:33.924910: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll
+2024-09-17 18:59:33.926416: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll
+2024-09-17 18:59:33.938015: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll
+2024-09-17 18:59:33.938159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2024-09-17 18:59:33.938457: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-09-17 18:59:33.945032: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x227b8284c60 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-09-17 18:59:33.945362: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2024-09-17 18:59:33.945528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: GeForce RTX 2070 SUPER computeCapability: 7.5
+coreClock: 1.815GHz coreCount: 40 deviceMemorySize: 8.00GiB deviceMemoryBandwidth: 417.29GiB/s
+2024-09-17 18:59:33.945680: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudart64_101.dll
+2024-09-17 18:59:33.945755: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll
+2024-09-17 18:59:33.945827: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll
+2024-09-17 18:59:33.945901: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll
+2024-09-17 18:59:33.945988: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll
+2024-09-17 18:59:33.946062: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusparse64_10.dll
+2024-09-17 18:59:33.946138: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll
+2024-09-17 18:59:33.946232: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2024-09-17 18:59:34.417149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2024-09-17 18:59:34.417239: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0
+2024-09-17 18:59:34.417289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N
+2024-09-17 18:59:34.417455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6613 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2070 SUPER, pci bus id: 0000:01:00.0, compute capability: 7.5)
+2024-09-17 18:59:34.419568: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x227e7474ca0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-09-17 18:59:34.419669: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce RTX 2070 SUPER, Compute Capability 7.5
+Found 80012 files belonging to 245 classes.
+Using 16002 files for validation.
+['其他垃圾_PE塑料袋', '其他垃圾_U型回形针', '其他垃圾_一次性杯子', '其他垃圾_一次性棉签', '其他垃圾_串串竹签', '其他垃圾_便利贴', '其他垃圾_创可贴', '其他垃圾_卫生纸', '其他垃圾_厨房手套', '其他垃圾_厨房抹布', '其他垃圾_口罩', '其他垃圾_唱片', '其他垃圾_图钉', '其他垃圾_大龙虾头', '其他垃圾_奶茶杯', '其他垃圾_干燥剂', '其他垃圾_彩票', '其他垃圾_打泡网', '其他垃圾_打火机', '其他垃圾_搓澡巾', '其他垃圾_果壳', '其他垃圾_毛巾', '其他垃圾_涂改带', '其他垃圾_湿纸巾', '其他垃圾_烟蒂', '其他垃圾_牙刷', '其他垃圾_电影票', '其他垃圾_电蚊香', '其他垃圾_百洁布', '其他垃圾_眼镜', '其他垃圾_眼镜布', '其他垃圾_空调滤芯', '其他垃圾_笔', '其他垃圾_胶带', '其他垃圾_胶水废包装', '其他垃圾_苍蝇拍', '其他垃圾_茶壶碎片', '其他垃圾_草帽', '其他垃圾_菜板', '其他垃圾_车票', '其他垃圾_酒精棉', '其他垃圾_防霉防蛀片', '其他垃圾_除湿袋', '其他垃圾_餐巾纸', '其他垃圾_餐盒', '其他垃圾_验孕棒', '其他垃圾_鸡毛掸', '厨余垃圾_八宝粥', '厨余垃圾_冰激凌', '厨余垃圾_冰糖葫芦', '厨余垃圾_咖啡', '厨余垃圾_圣女果', '厨余垃圾_地瓜', '厨余垃圾_坚果', '厨余垃圾_壳', '厨余垃圾_巧克力', '厨余垃圾_果冻', '厨余垃圾_果皮', '厨余垃圾_核桃', '厨余垃圾_梨', '厨余垃圾_橙子', '厨余垃圾_残渣剩饭', '厨余垃圾_水果', '厨余垃圾_泡菜', '厨余垃圾_火腿', '厨余垃圾_火龙果', '厨余垃圾_烤鸡', '厨余垃圾_瓜子', '厨余垃圾_甘蔗', '厨余垃圾_番茄', '厨余垃圾_秸秆杯', '厨余垃圾_秸秆碗', '厨余垃圾_粉条', '厨余垃圾_肉类', '厨余垃圾_肠', '厨余垃圾_苹果', '厨余垃圾_茶叶', '厨余垃圾_草莓', '厨余垃圾_菠萝', '厨余垃圾_菠萝蜜', '厨余垃圾_萝卜', '厨余垃圾_蒜', '厨余垃圾_蔬菜', '厨余垃圾_薯条', '厨余垃圾_薯片', '厨余垃圾_蘑菇', '厨余垃圾_蛋', '厨余垃圾_蛋挞', '厨余垃圾_蛋糕', '厨余垃圾_豆', '厨余垃圾_豆腐', '厨余垃圾_辣椒', '厨余垃圾_面包', '厨余垃圾_饼干', '厨余垃圾_鸡翅', '可回收物_不锈钢制品', '可回收物_乒乓球拍', '可回收物_书', '可回收物_体重秤', '可回收物_保温杯', '可回收物_保鲜膜内芯', '可回收物_信封', '可回收物_充电头', '可回收物_充电宝', '可回收物_充电牙刷', '可回收物_充电线', '可回收物_凳子', '可回收物_刀', '可回收物_包', '可回收物_单车', '可回收物_卡', '可回收物_台灯', '可回收物_吊牌', '可回收物_吹风机', '可回收物_呼啦圈', '可回收物_地球仪', '可回收物_地铁票', '可回收物_垫子', '可回收物_塑料制品', '可回收物_太阳能热水器', '可回收物_奶粉桶', '可回收物_尺子', '可回收物_尼龙绳', '可回收物_布制品', '可回收物_帽子', '可回收物_手机', '可回收物_手电筒', '可回收物_手表', '可回收物_手链', '可回收物_打包绳', '可回收物_打印机', '可回收物_打气筒', '可回收物_扫地机器人', '可回收物_护肤品空瓶', '可回收物_拉杆箱', '可回收物_拖鞋', '可回收物_插线板', '可回收物_搓衣板', '可回收物_收音机', '可回收物_放大镜', '可回收物_日历', '可回收物_暖宝宝', '可回收物_望远镜', '可回收物_木制切菜板', '可回收物_木桶', '可回收物_木棍', '可回收物_木质梳子', '可回收物_木质锅铲', '可回收物_木雕', '可回收物_枕头', '可回收物_果冻杯', '可回收物_桌子', '可回收物_棋子', '可回收物_模具', '可回收物_毯子', '可回收物_水壶', '可回收物_水杯', '可回收物_沙发', '可回收物_泡沫板', '可回收物_灭火器', '可回收物_灯罩', '可回收物_烟灰缸', '可回收物_热水瓶', '可回收物_燃气灶', '可回收物_燃气瓶', '可回收物_玩具', '可回收物_玻璃制品', '可回收物_玻璃器皿', '可回收物_玻璃壶', '可回收物_玻璃球', '可回收物_瑜伽球', '可回收物_电动剃须刀', '可回收物_电动卷发棒', '可回收物_电子秤', '可回收物_电熨斗', '可回收物_电磁炉', '可回收物_电脑屏幕', '可回收物_电视机', '可回收物_电话', '可回收物_电路板', '可回收物_电风扇', '可回收物_电饭煲', '可回收物_登机牌', '可回收物_盒子', '可回收物_盖子', '可回收物_盘子', '可回收物_碗', '可回收物_磁铁', '可回收物_空气净化器', '可回收物_空气加湿器', '可回收物_笼子', '可回收物_箱子', '可回收物_纸制品', '可回收物_纸牌', '可回收物_罐子', '可回收物_网卡', '可回收物_耳套', '可回收物_耳机', '可回收物_衣架', '可回收物_袋子', '可回收物_袜子', '可回收物_裙子', '可回收物_裤子', '可回收物_计算器', '可回收物_订书机', '可回收物_话筒', '可回收物_豆浆机', '可回收物_路由器', '可回收物_轮胎', '可回收物_过滤网', '可回收物_遥控器', '可回收物_量杯', '可回收物_金属制品', '可回收物_钉子', '可回收物_钥匙', '可回收物_铁丝球', '可回收物_铅球', '可回收物_铝制用品', '可回收物_锅', '可回收物_锅盖', '可回收物_键盘', '可回收物_镊子', '可回收物_闹铃', '可回收物_雨伞', '可回收物_鞋', '可回收物_音响', '可回收物_餐具', '可回收物_餐垫', '可回收物_饰品', '可回收物_鱼缸', '可回收物_鼠标', '有害垃圾_指甲油', '有害垃圾_杀虫剂', '有害垃圾_温度计', '有害垃圾_灯', '有害垃圾_电池', '有害垃圾_电池板', '有害垃圾_纽扣电池', '有害垃圾_胶水', '有害垃圾_药品包装', '有害垃圾_药片', '有害垃圾_药瓶', '有害垃圾_药膏', '有害垃圾_蓄电池', '有害垃圾_血压计']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+rescaling (Rescaling)        (None, 224, 224, 3)       0
+_________________________________________________________________
+conv2d (Conv2D)              (None, 222, 222, 32)      896
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 111, 111, 32)      0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 109, 109, 64)      18496
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 54, 54, 64)        0
+_________________________________________________________________
+flatten (Flatten)            (None, 186624)            0
+_________________________________________________________________
+dense (Dense)                (None, 128)               23888000
+_________________________________________________________________
+dense_1 (Dense)              (None, 245)               31605
+=================================================================
+Total params: 23,938,997
+Trainable params: 23,938,997
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/30
+2024-09-17 18:59:37.633291: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cublas64_10.dll
+2024-09-17 18:59:38.256895: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cudnn64_7.dll
+2024-09-17 18:59:39.083775: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Internal: Invoking GPU asm compilation is supported on Cuda non-Windows platforms only
+Relying on driver to perform ptx compilation.
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+4501/4501 [==============================] - 327s 73ms/step - loss: 4.6594 - accuracy: 0.0876 - val_loss: 4.3035 - val_accuracy: 0.1141
+Epoch 2/30
+4501/4501 [==============================] - 328s 73ms/step - loss: 4.1465 - accuracy: 0.1414 - val_loss: 3.9294 - val_accuracy: 0.1691
+Epoch 3/30
+4501/4501 [==============================] - 331s 73ms/step - loss: 3.7468 - accuracy: 0.1964 - val_loss: 3.4536 - val_accuracy: 0.2504
+Epoch 4/30
+4501/4501 [==============================] - 334s 74ms/step - loss: 3.2320 - accuracy: 0.2846 - val_loss: 2.8545 - val_accuracy: 0.3590
+Epoch 5/30
+4501/4501 [==============================] - 339s 75ms/step - loss: 2.5444 - accuracy: 0.4160 - val_loss: 2.3367 - val_accuracy: 0.5315
+Epoch 6/30
+4501/4501 [==============================] - 327s 73ms/step - loss: 1.6699 - accuracy: 0.6009 - val_loss: 2.2531 - val_accuracy: 0.6131
+Epoch 7/30
+4501/4501 [==============================] - 327s 73ms/step - loss: 0.8442 - accuracy: 0.7890 - val_loss: 2.6942 - val_accuracy: 0.6330
+Epoch 8/30
+4501/4501 [==============================] - 330s 73ms/step - loss: 0.3982 - accuracy: 0.8968 - val_loss: 2.9362 - val_accuracy: 0.6532
+Epoch 9/30
+4501/4501 [==============================] - 329s 73ms/step - loss: 0.2396 - accuracy: 0.9385 - val_loss: 3.2762 - val_accuracy: 0.6499
+Epoch 10/30
+4501/4501 [==============================] - 327s 73ms/step - loss: 0.1499 - accuracy: 0.9629 - val_loss: 3.3518 - val_accuracy: 0.6606
+Epoch 11/30
+4501/4501 [==============================] - 329s 73ms/step - loss: 0.0925 - accuracy: 0.9789 - val_loss: 3.4960 - val_accuracy: 0.6669
+Epoch 12/30
+4501/4501 [==============================] - 336s 75ms/step - loss: 0.0576 - accuracy: 0.9883 - val_loss: 3.7284 - val_accuracy: 0.6686
+Epoch 13/30
+4501/4501 [==============================] - 331s 73ms/step - loss: 0.0356 - accuracy: 0.9941 - val_loss: 3.7672 - val_accuracy: 0.6729
+Epoch 14/30
+4501/4501 [==============================] - 337s 75ms/step - loss: 0.0237 - accuracy: 0.9973 - val_loss: 3.7568 - val_accuracy: 0.6749
+Epoch 15/30
+4501/4501 [==============================] - 330s 73ms/step - loss: 0.0172 - accuracy: 0.9985 - val_loss: 3.8382 - val_accuracy: 0.6755
+Epoch 16/30
+4501/4501 [==============================] - 331s 74ms/step - loss: 0.0145 - accuracy: 0.9987 - val_loss: 3.8281 - val_accuracy: 0.6764
+Epoch 17/30
+4501/4501 [==============================] - 330s 73ms/step - loss: 0.0129 - accuracy: 0.9987 - val_loss: 3.8353 - val_accuracy: 0.6769
+Epoch 18/30
+4501/4501 [==============================] - 329s 73ms/step - loss: 0.0111 - accuracy: 0.9987 - val_loss: 3.8570 - val_accuracy: 0.6767
+Epoch 19/30
+4501/4501 [==============================] - 329s 73ms/step - loss: 0.0104 - accuracy: 0.9987 - val_loss: 3.8550 - val_accuracy: 0.6763
+Epoch 20/30
+4501/4501 [==============================] - 332s 74ms/step - loss: 0.0092 - accuracy: 0.9987 - val_loss: 3.8503 - val_accuracy: 0.6761
+Epoch 21/30
+4501/4501 [==============================] - 327s 73ms/step - loss: 0.0085 - accuracy: 0.9987 - val_loss: 3.8619 - val_accuracy: 0.6765
+Epoch 22/30
+4501/4501 [==============================] - 326s 72ms/step - loss: 0.0080 - accuracy: 0.9987 - val_loss: 3.8828 - val_accuracy: 0.6756
+Epoch 23/30
+4501/4501 [==============================] - 325s 72ms/step - loss: 0.0072 - accuracy: 0.9988 - val_loss: 3.8980 - val_accuracy: 0.6756
+Epoch 24/30
+4501/4501 [==============================] - 325s 72ms/step - loss: 0.0069 - accuracy: 0.9987 - val_loss: 3.9019 - val_accuracy: 0.6761
+Epoch 25/30
+4501/4501 [==============================] - 326s 72ms/step - loss: 0.0062 - accuracy: 0.9988 - val_loss: 3.9529 - val_accuracy: 0.6755
+Epoch 26/30
+4501/4501 [==============================] - 330s 73ms/step - loss: 0.0060 - accuracy: 0.9988 - val_loss: 3.9656 - val_accuracy: 0.6755
+Epoch 27/30
+4501/4501 [==============================] - 330s 73ms/step - loss: 0.0056 - accuracy: 0.9987 - val_loss: 3.9903 - val_accuracy: 0.6750
+Epoch 28/30
+4501/4501 [==============================] - 329s 73ms/step - loss: 0.0053 - accuracy: 0.9988 - val_loss: 4.0291 - val_accuracy: 0.6750
+Epoch 29/30
+4501/4501 [==============================] - 330s 73ms/step - loss: 0.0049 - accuracy: 0.9988 - val_loss: 4.0643 - val_accuracy: 0.6750
+Epoch 30/30
+4501/4501 [==============================] - 332s 74ms/step - loss: 0.0046 - accuracy: 0.9988 - val_loss: 4.0753 - val_accuracy: 0.6750
+该循环程序运行时间： 9913.601197481155 s
