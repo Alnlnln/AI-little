@@ -1,9 +1,9 @@
 本例程使用的环境及其版本号如下：(requirement.txt)
-tensorflow-cpu == 2.3.0;
-pyqt5;
-pillow;
-opencv-python;
-matplotlib;
+tensorflow-cpu == 2.3.0;<br />
+pyqt5;<br />
+pillow;<br />
+opencv-python;<br />
+matplotlib;<br />
 
 基于tensorflow2.3的垃圾分类系统
 
